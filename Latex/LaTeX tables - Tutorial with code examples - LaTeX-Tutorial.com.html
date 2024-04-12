@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://latex-tutorial.com/tutorials/tables/ -->
+<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async="" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/js"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  	  gtag('config', 'UA-36359800-2');
+	  
+	  
+	</script>
+
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="https://latex-tutorial.com/wp-content/uploads/2023/03/Favicon.png">
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+	<!-- This site is optimized with the Yoast SEO plugin v20.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com</title>
+	<link rel="canonical" href="https://latex-tutorial.com/tutorials/tables/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com">
+	<meta property="og:description" content="Learn to create tables in LaTeX including all features such as multi row, multi column, multi page and landscape tables. All in one place. Your first table / table template">
+	<meta property="og:url" content="https://latex-tutorial.com/tutorials/tables/">
+	<meta property="og:site_name" content="LaTeX-Tutorial.com">
+	<meta property="article:modified_time" content="2021-03-08T12:31:25+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="15 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://latex-tutorial.com/tutorials/tables/","url":"https://latex-tutorial.com/tutorials/tables/","name":"LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com","isPartOf":{"@id":"https://latex-tutorial.com/#website"},"datePublished":"2021-03-04T02:07:00+00:00","dateModified":"2021-03-08T12:31:25+00:00","breadcrumb":{"@id":"https://latex-tutorial.com/tutorials/tables/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://latex-tutorial.com/tutorials/tables/"]}]},{"@type":"BreadcrumbList","@id":"https://latex-tutorial.com/tutorials/tables/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://latex-tutorial.com/"},{"@type":"ListItem","position":2,"name":"A simple guide to LaTeX &#8211; Step by Step","item":"https://latex-tutorial.com/tutorials/"},{"@type":"ListItem","position":3,"name":"LaTeX tables &#8211; Tutorial with code examples"}]},{"@type":"WebSite","@id":"https://latex-tutorial.com/#website","url":"https://latex-tutorial.com/","name":"LaTeX-Tutorial.com","description":"Learn how to use LaTeX","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://latex-tutorial.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="https://scripts.mediavine.com/">
+<link rel="alternate" type="application/rss+xml" title="LaTeX-Tutorial.com » Feed" href="https://latex-tutorial.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="LaTeX-Tutorial.com » Comments Feed" href="https://latex-tutorial.com/comments/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/latex-tutorial.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.2"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/style.min.css" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="income-school-style-css" href="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/style.css" type="text/css" media="all">
+<style id="custom-style-inline-css" type="text/css">
+body { color: #000000; }
+			h1, h2, h3, h4, h5, h6, .header { color: #f44336; }
+			a { transition: color .2s; color: #f44336 };
+			a:hover, a:focus, a:active { color: #f49089; }
+			.wp-block-button__link, button,	input[type='button'], input[type='reset'], input[type='submit'], .button { background: #000; color: #ffffff; }
+			.antibounce-container { background: #f0f0f0; }
+			.antibounce-card { color: #000000; }
+			.antibounce-card .button { background: #000000; color: #ffffff }
+a {
+  text-decoration: none;
+}
+.home .entry-header {
+    display: none;
+}
+
+      .ace_editor {
+	  border: 1px solid lightgray;
+	  margin-bottom: 2px !important;
+	  width: 100%;
+      }
+      div.spacer {
+	  margin-top:16px;
+      }
+    
+
+
+
+article.author-card {
+display: none;
+}
+
+code { 
+font-size:16px; 
+} 
+
+/* MV CSS Adjustment */
+@media only screen and (max-width: 440px) {    
+.entry-content p { 
+word-break: break-word;   
+ }    
+.inner-wrap {        
+padding-left: 10px!important;        
+padding-right: 10px!important;    
+}
+}
+@media only screen and (max-width: 359px) {    
+#content  {        
+padding-left: 10px!important;        
+padding-right: 10px!important;   
+ }
+li .mv-ad-box {    
+ margin-left:-10px;
+}
+}
+</style>
+<script type="text/javascript" async="async" data-noptimize="1" data-cfasync="false" defer="" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/latex-tutorial.js" id="mv-script-wrapper-js"></script>
+<link rel="https://api.w.org/" href="https://latex-tutorial.com/wp-json/"><link rel="alternate" type="application/json" href="https://latex-tutorial.com/wp-json/wp/v2/pages/602"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://latex-tutorial.com/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.5.2">
+<link rel="shortlink" href="https://latex-tutorial.com/?p=602">
+<link rel="alternate" type="application/json+oembed" href="https://latex-tutorial.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flatex-tutorial.com%2Ftutorials%2Ftables%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://latex-tutorial.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flatex-tutorial.com%2Ftutorials%2Ftables%2F&amp;format=xml">
+<meta property="og:locale" content="en_US"><meta property="og:type" content="article"><meta property="og:title" content="LaTeX tables – Tutorial with code examples | LaTeX-Tutorial.com"><meta property="og:description" content="Learn to create tables in LaTeX including all features such as multi row, multi column, multi page and landscape tables. All in one place."><meta property="og:url" content="https://latex-tutorial.com/tutorials/tables/"><meta property="og:site_name" content="LaTeX-Tutorial.com"><meta name="twitter:card" content="summary_large_image"><meta name="description" content="Learn to create tables in LaTeX including all features such as multi row, multi column, multi page and landscape tables. All in one place.">
+<link rel="stylesheet" type="text/css" href="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/enlighterjs.min.css" media="all"><script src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/enlighterjs.min.js" async=""></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+
+<body class="page-template-default page page-id-602 page-child parent-pageid-508 no-sidebar"><div id="MathJax_Message" style="display: none;"></div>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="https://latex-tutorial.com/tutorials/tables/#content">Skip to content</a>
+
+	
+	<header id="masthead" class="site-header desktop-toggle toggled">
+		<div class="inner-wrap">
+			<div class="hamburger-wrapper desktop">
+				<button class="hamburger hamburger--squeeze menu-toggle" type="button" aria-label="Menu" aria-controls="primary-menu" aria-expanded="true">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+					<span class="label">MENU</span>
+				</button>
+			</div>
+			<div class="site-branding">
+								<a href="https://latex-tutorial.com/" class="custom-logo-link" rel="home" itemprop="url"><h1>LaTeX-Tutorial.com</h1></a>
+									<!-- <h1 class="site-title"><a tabindex="-1" href="" rel="home"></a></h1> -->
+										<!-- <p class="site-title"><a tabindex="-1" href="" rel="home"></a></p> -->
+								</div><!-- .site-branding -->
+			<div class="search-wrapper">
+				<a href="https://latex-tutorial.com/tutorials/tables/#open" id="search-icon" style="background: url(https://latex-tutorial.com/wp-content/themes/acabado-1.2.2/img/search-icon.png) center/cover no-repeat #fff;"><span class="sr-only">Search</span></a>
+				
+<form role="search" method="get" class="search-form" action="https://latex-tutorial.com/">
+	<style>
+	.search-wrapper.search-active .search-field {
+		width: 200px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.search-wrapper button[type="submit"] {
+		display: inline-block;
+		vertical-align: top;
+		top: -35px;
+		position: relative;
+		background-color: transparent;
+		height: 30px;
+		width: 30px;
+		padding: 0;
+		margin: 0;
+		background-image: url("https://latex-tutorial.com/wp-content/themes/acabado-1.2.2/img/search-icon.png");
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.search-wrapper.search-active button[type="submit"] {
+		display: inline-block !important;
+	}
+	</style>
+	<label for="s">
+		<span class="screen-reader-text">Search for:</span>
+	</label>
+	<input type="search" id="search-field" class="search-field" placeholder="Search …" value="" name="s">
+	<button type="submit" class="search-submit" style="display:none;"><span class="screen-reader-text"></span></button>
+</form>
+			</div>
+		</div>
+
+		<nav id="site-navigation" class="main-navigation" style="overflow: visible;">
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></button> -->
+			<div class="menu-primary-container"><ul id="primary-menu" class="inner-wrap nav-menu" aria-expanded="true"><li id="menu-item-1036" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1036"><a href="https://latex-tutorial.com/blog/">Blog</a></li>
+<li id="menu-item-437" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-437"><a href="https://latex-tutorial.com/installation/">Installation</a></li>
+<li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="https://latex-tutorial.com/quick-start/">Quick Start</a></li>
+<li id="menu-item-511" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-511"><a href="https://latex-tutorial.com/tutorials/">Tutorials</a>
+<button type="button" class="toggle-submenu" style="display: none"><span class="sr-only">Submenu Toggle
+				</span></button><ul class="submenu">
+	<li id="menu-item-516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-516"><a href="https://latex-tutorial.com/tutorials/first-document/">01 First Document</a></li>
+	<li id="menu-item-526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-526"><a href="https://latex-tutorial.com/tutorials/sections/">02 Sections</a></li>
+	<li id="menu-item-545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a href="https://latex-tutorial.com/tutorials/packages/">03 Packages</a></li>
+	<li id="menu-item-549" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-549"><a href="https://latex-tutorial.com/tutorials/amsmath/">04 Math</a></li>
+	<li id="menu-item-559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-559"><a href="https://latex-tutorial.com/tutorials/figures/">05 Figures</a></li>
+	<li id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-575"><a href="https://latex-tutorial.com/tutorials/table-of-contents/">06 Table of contents</a></li>
+	<li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597"><a href="https://latex-tutorial.com/tutorials/bibtex/">07 Bibtex</a></li>
+	<li id="menu-item-601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601"><a href="https://latex-tutorial.com/tutorials/footnotes/">08 Footnotes</a></li>
+	<li id="menu-item-617" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-602 current_page_item menu-item-617"><a href="https://latex-tutorial.com/tutorials/tables/" aria-current="page">09 Tables</a></li>
+	<li id="menu-item-623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-623"><a href="https://latex-tutorial.com/tutorials/pgfplotstable/">10 Pgfplotstable</a></li>
+	<li id="menu-item-628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-628"><a href="https://latex-tutorial.com/tutorials/pgfplots/">11 Pgfplots</a></li>
+	<li id="menu-item-634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-634"><a href="https://latex-tutorial.com/tutorials/tikz/">12 TikZ</a></li>
+	<li id="menu-item-641" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641"><a href="https://latex-tutorial.com/tutorials/listings/">13 Listings</a></li>
+	<li id="menu-item-647" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-647"><a href="https://latex-tutorial.com/tutorials/circuitikz/">14 Circuitikz</a></li>
+	<li id="menu-item-667" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-667"><a href="https://latex-tutorial.com/more-circuitikz/">15 More Circuitikz</a></li>
+	<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-673"><a href="https://latex-tutorial.com/tutorials/hyperlinks/">16 Hyperlinks</a></li>
+	<li id="menu-item-683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-683"><a href="https://latex-tutorial.com/tutorials/lists/">17 Lists</a></li>
+	<li id="menu-item-2114" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2114"><a href="https://latex-beamer.com/">18 Beamer</a></li>
+</ul>
+</li>
+<li id="menu-item-690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-690"><a href="https://latex-tutorial.com/symbols/">Symbols</a>
+<button type="button" class="toggle-submenu" style="display: none"><span class="sr-only">Submenu Toggle
+				</span></button><ul class="submenu">
+	<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-691"><a href="https://latex-tutorial.com/symbols/greek-alphabet/">Greek Alphabet</a></li>
+	<li id="menu-item-828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-828"><a href="https://latex-tutorial.com/symbols/math-symbols/">Math Symbols</a></li>
+	<li id="menu-item-832" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-832"><a href="https://latex-tutorial.com/symbols/text-formatting/">Text Formatting</a></li>
+</ul>
+</li>
+<li id="menu-item-964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-964"><a href="https://latex-tutorial.com/about/">About</a>
+<button type="button" class="toggle-submenu" style="display: none"><span class="sr-only">Submenu Toggle
+				</span></button><ul class="submenu">
+	<li id="menu-item-965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-965"><a href="https://latex-tutorial.com/about/imprint/">Imprint</a></li>
+	<li id="menu-item-968" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-968"><a href="https://latex-tutorial.com/about/privacy-copy/">Privacy</a></li>
+</ul>
+</li>
+<li id="menu-item-836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-836"><a href="https://latex-tutorial.com/downloads/">Downloads</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
+		
+<article id="post-602" class="post-602 page type-page status-publish hentry mv-content-wrapper">
+	<header class="entry-header">
+		<h1 class="entry-title">LaTeX tables – Tutorial with code examples</h1>	</header><!-- .entry-header -->
+
+	
+	<div class="entry-content">
+		
+<h2 class="has-black-color has-text-color has-medium-font-size wp-block-heading"><strong>Learn to create tables in LaTeX including all features such as multi row, multi column, multi page and landscape tables. All in one place.</strong></h2>
+
+
+
+<hr class="wp-block-separator has-text-color has-background has-luminous-vivid-orange-background-color has-luminous-vivid-orange-color is-style-wide">
+
+
+
+<ol>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Template">Your first table / table template</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Align">Align numbers at decimal point</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Rows">Adding rows and columns</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Multirows">Cells spanning multiple rows and multiple columns</a>
+	<ol type="a">
+		<li><a href="https://latex-tutorial.com/tutorials/tables/#Multirow">Using multirow</a></li>
+		<li><a href="https://latex-tutorial.com/tutorials/tables/#Multicolumn">Using multicolumn</a></li>
+		<li><a href="https://latex-tutorial.com/tutorials/tables/#Multicell">Combining multirow and multicolumn</a></li>
+	</ol>
+	</li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Booktabs">Prettier tables with booktabs</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Multipage">Tables spanning multiple pages</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Landscape">Landscape / sideways tables</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Csv">Tables from Excel (.csv) to LaTeX</a></li>
+</ol>
+
+<p>In this tutorial we’re going to learn how to use the <em>table</em> and <em>tabular</em>&nbsp;environments to create tables in LaTeX. At first we’re going to create a simple table like this:</p>
+
+<p><cms-plugin alt="Image - table-1.png " id="346" render-plugin="true" title="Image - table-1.png"><img decoding="async" alt="table-1.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-1.png__269x138_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>After showing you how to modify this table according to your needs, I will also show you how to make your tables prettier and turn the table above into this:</p>
+
+<p><cms-plugin alt="Image - table-8.png " id="348" render-plugin="true" title="Image - table-8.png"><img decoding="async" alt="table-8.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-8.png__253x143_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>Of course it’s up to your personal preference, but most of the time, I’ve found that the second table is much more readable and easier on the eye than the first table.</p>
+
+<p>Afterwards I’m also going to show you, how to do some more elaborate things such as having rows and colums spend multiple cells as well as orienting tables sideways on the page (useful for tables with many columns) and how to have tables span multiple pages (useful for tables with many rows).</p>
+
+<p>I’ve also created a tool to edit LaTeX tables right in your browser. This feature is still experimental, but if you want to try it, you can find it <cms-plugin alt="Link - here " id="442" render-plugin="true" title="Link - here"><a href="https://latex-tutorial.com/tools/table-editor/">here</a></cms-plugin>. I appreciate any&nbsp;feedback, so I can create a tool that you love using.</p>
+
+<h2><a name="Template"></a>Your first table</h2>
+
+<p>Tables in LaTeX can be created through a combination of the <em>table</em>&nbsp;environment and the tabular <em>environment.</em>&nbsp;The <em>table</em> environment part contains the caption and defines the float for our table, i.e. where in our document the table should be positioned and whether we want it to be displayed centered. The<em> \caption</em> and <em>\label </em>commands can be used in the same way as for pictures.&nbsp;The actual content of the table is contained within the <em>tabular</em> environment.</p>
+
+<p>The <em>tabular</em> environment uses<em>&nbsp;ampersands &amp; </em>as <em>column seperators</em> and <em>newline symbols \\ </em>as row seperators. The vertical lines separating the columns of our table (|) are passed as an argument to the tabular environment (e.g.<em>&nbsp;</em>\begin{tabular}{l|c|r}&nbsp;) and the letters tell whether we want to align the content to the left (l), to the center (c) or to the right (r) for each column. There should be one letter for every column and a vertical line in between them or in front of them, if we want a vertical line to be shown in the table.&nbsp;Row seperators can be added with the <em>\hline </em>command.</p>
+
+<p>Now let’s take a look at some actual code for a basic table, which you can easily copy-and-paste into your document and modify it to your needs.</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">\documentclass</span><span class="enlighter-g1">{</span><span class="enlighter-text">article</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Your first table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|c|r</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % &lt;-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span></div></div></div><div class="enlighter-raw">\documentclass{article}
+
+\begin{document}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Your first table.}
+    \label{tab:table1}
+    \begin{tabular}{l|c|r} % &lt;-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\end{document}</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">\documentclass{article}
+
+\begin{document}
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Your first table.}
+    \label{tab:table1}
+    \begin{tabular}{l|c|r} % &lt;-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\end{document}</pre>
+
+<p>The above code will print out the table which I’ve already shown you in the introduction and it looks like this:</p>
+
+<p><cms-plugin alt="Image - table-1.png " id="349" render-plugin="true" title="Image - table-1.png"><img decoding="async" alt="table-1.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-1.png__269x138_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>While this table already works, it’s not very satisfying and readable that the numbers in the center column are not aligned at the decimal point. Fortunately, we don’t have to add spacing somehow manually, but we can use the <em>siunitx</em> package for this purpose.</p>
+
+<h2><a name="Align"></a>Align numbers&nbsp;at decimal point</h2>
+
+<p>The first thing we have to do is to include the <em>siunitx</em> package in our preamble and use the command <em>\sisetup</em>&nbsp;to tell the package how many digital places it should display:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\usepackage</span><span class="enlighter-g1">{</span><span class="enlighter-text">siunitx</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % Required for alignment</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\sisetup</span><span class="enlighter-g1">{</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  round-mode          = places,</span><span class="enlighter-c0"> % Rounds numbers</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  round-precision     = </span><span class="enlighter-n1">2</span><span class="enlighter-text">,</span><span class="enlighter-c0"> % to 2 places</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"> </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\usepackage{siunitx} % Required for alignment
+
+\sisetup{
+  round-mode          = places, % Rounds numbers
+  round-precision     = 2, % to 2 places
+}
+
+\begin{document} 
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\usepackage{siunitx} % Required for alignment
+
+\sisetup{
+&nbsp; round-mode &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= places, % Rounds numbers
+&nbsp; round-precision &nbsp; &nbsp; = 2, % to 2 places
+}
+
+\begin{document} 
+
+%...</pre>
+
+<p>Afterwards we can use a new alignment setting in our tables, so besides left (l), center (c) and&nbsp;right (r), there’s now an additional setting S, which will align the numbers automatically. In our previous table, there was an alignment problem with the middle column, so I’ve now changed the alignment setting of the middle column from (c) to (S):</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Table with aligned units.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % &lt;-- Changed to S here.</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table with aligned units.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r} % &lt;-- Changed to S here.
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table with aligned units.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r} % &lt;-- Changed to S here.
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</pre>
+
+<p>We can now observe, that LaTeX will now properly align the numbers at their decimal points and round the numbers to two decimal places:</p>
+
+<p><cms-plugin alt="Image - table-2.png " id="350" render-plugin="true" title="Image - table-2.png"><img decoding="async" alt="table-2.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-2.png__253x130_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<h2><a name="Rows"></a>Adding rows and columns</h2>
+
+<p>Now that we’ve setup our table properly, we can focus on adding more rows and columns. As I’ve mentioned before, LaTeX uses&nbsp;column separators (&amp;) and row separators (\\) to layout the cells of our table. For the 5×3 table shown above&nbsp;we can count five&nbsp;times (\\) behind each row and two&nbsp;times (&amp;) per row, separating the content of three columns.</p>
+
+<p>If we now want to add an additional column, it’s as simple as copy and pasting the previous column and changing the contents. I will be reusing the table from above for this example and add an additional column:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">More rows.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">4</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">25.113231</span><span class="enlighter-text"> &amp; d\\</span><span class="enlighter-c0"> % &lt;-- added row here</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{More rows.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\ % &lt;-- added row here
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{More rows.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\ % &lt;-- added row here
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</pre>
+
+<p>This will generate the following output:</p>
+
+<p><cms-plugin alt="Image - table-3.png " id="351" render-plugin="true" title="Image - table-3.png"><img decoding="async" alt="table-3.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-3.png__257x145_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>Adding an additional column is also possible, but you have to be careful, because you have to add a column separator (&amp;) to every column:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">More columns.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r|l</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">4</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span><span class="enlighter-c0"> % &lt;-- added &amp; and content for each column</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\delta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span><span class="enlighter-c0"> % &lt;--</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a &amp; e\\</span><span class="enlighter-c0"> % &lt;--</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b &amp; f\\</span><span class="enlighter-c0"> % &lt;--</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c &amp; g\\</span><span class="enlighter-c0"> % &lt;--</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{More columns.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r|l}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3} &amp; \textbf{Value 4}\\ % &lt;-- added &amp; and content for each column
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ &amp; $\delta$ \\ % &lt;--
+      \hline
+      1 &amp; 1110.1 &amp; a &amp; e\\ % &lt;--
+      2 &amp; 10.1 &amp; b &amp; f\\ % &lt;--
+      3 &amp; 23.113231 &amp; c &amp; g\\ % &lt;--
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{More columns.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r|l}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3} &amp; \textbf{Value 4}\\ % &lt;-- added &amp; and content for each column
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ &amp; $\delta$ \\ % &lt;--
+      \hline
+      1 &amp; 1110.1 &amp; a &amp; e\\ % &lt;--
+      2 &amp; 10.1 &amp; b &amp; f\\ % &lt;--
+      3 &amp; 23.113231 &amp; c &amp; g\\ % &lt;--
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</pre>
+
+<p>We will now see an additional column in our output:</p>
+
+<p><cms-plugin alt="Image - table-4.png " id="352" render-plugin="true" title="Image - table-4.png"><img decoding="async" alt="table-4.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-4.png__339x144_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<h2><a name="Multirows"></a>Cells spanning multiple&nbsp;rows or&nbsp;multiple columns</h2>
+
+<ol type="a">
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Multirow">Using multirow</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Multicolumn">Using multicolumn</a></li>
+	<li><a href="https://latex-tutorial.com/tutorials/tables/#Multicell">Combining multirow and multicolumn</a></li>
+</ol>
+
+<p>Sometimes it’s necessary to make a row span several cells. For this purpose we can use the <em>multirow</em> package, so the first thing we’re going to do is adding the required package to our preamble:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\usepackage</span><span class="enlighter-g1">{</span><span class="enlighter-text">multirow</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % Required for multirows</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"> </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\usepackage{multirow} % Required for multirows
+
+\begin{document} 
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\usepackage{multirow} % Required for multirows
+
+\begin{document} 
+
+%...</pre>
+
+<p>We can now use <em>multirow</em> and <em>multicolumn</em> environments, which allow us to conveniently span multiple rows or columns.</p>
+
+<h3><a name="Multirow"></a>Using multirow</h3>
+
+<p>In order for a cell to span multiple rows, we have to use the <em>multirow</em> command. This command accepts three parameters:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">\multirow</span><span class="enlighter-g1">{</span><span class="enlighter-text">NUMBER_OF_ROWS</span><span class="enlighter-g1">}{</span><span class="enlighter-text">WIDTH</span><span class="enlighter-g1">}{</span><span class="enlighter-text">CONTENT</span><span class="enlighter-g1">}</span></div></div></div><div class="enlighter-raw">\multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">\multirow{NUMBER_OF_ROWS}{WIDTH}{CONTENT}</pre>
+
+<p>I usually use an asterisk (*) as a parameter for the width, since this basically means, that the width should be determined automatically.</p>
+
+<p>Because we’re combining two rows in our example, it’s necessary to omit the content of the same row in the following line. Let’s look at how the actual LaTeX code would look like:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Multirow table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\multirow</span><span class="enlighter-g1">{</span><span class="enlighter-n1">2</span><span class="enlighter-g1">}{</span><span class="enlighter-text">*</span><span class="enlighter-g1">}{</span><span class="enlighter-n1">12</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span><span class="enlighter-c0"> % &lt;-- Combining 2 rows with arbitrary with (*) and content 12</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span><span class="enlighter-c0"> % &lt;-- Content of first column omitted.</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">4</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">25.113231</span><span class="enlighter-text"> &amp; d\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multirow table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multirow{2}{*}{12} &amp; 1110.1 &amp; a\\ % &lt;-- Combining 2 rows with arbitrary with (*) and content 12
+      &amp; 10.1 &amp; b\\ % &lt;-- Content of first column omitted.
+      \hline
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multirow table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multirow{2}{*}{12} &amp; 1110.1 &amp; a\\ % &lt;-- Combining 2 rows with arbitrary with (*) and content 12
+      &amp; 10.1 &amp; b\\ % &lt;-- Content of first column omitted.
+      \hline
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...
+</pre>
+
+<p>The modified table looks like this:</p>
+
+<p><cms-plugin alt="Image - table-5.png " id="353" render-plugin="true" title="Image - table-5.png"><img decoding="async" alt="table-5.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-5.png__268x150_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>You can now see, that the cell containing <em>12</em>&nbsp;spans two rows.</p>
+
+<h3><a name="Multicolumn"></a>Using multicolumn</h3>
+
+<p>If we want a cell to span multiple columns, we have to use the <em>multicolumn</em>&nbsp;command. The usage differs a bit from <em>multirow</em> command, since we also have to specifiy the alignment for our column. The command also requires three parameters:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-k0">\multicolumn</span><span class="enlighter-g1">{</span><span class="enlighter-text">NUMBER_OF_COLUMNS</span><span class="enlighter-g1">}{</span><span class="enlighter-text">ALIGNMENT</span><span class="enlighter-g1">}{</span><span class="enlighter-text">CONTENT</span><span class="enlighter-g1">}</span></div></div></div><div class="enlighter-raw">\multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">\multicolumn{NUMBER_OF_COLUMNS}{ALIGNMENT}{CONTENT}</pre>
+
+<p>In our example, we will again combine two neighboring cells, note that in the row where we’re using multicolumn to span two columns, there’s only one column separator (&amp;) (instead of two for all other rows):</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Multicolumn table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\multicolumn</span><span class="enlighter-g1">{</span><span class="enlighter-n1">2</span><span class="enlighter-g1">}{</span><span class="enlighter-text">c|</span><span class="enlighter-g1">}{</span><span class="enlighter-n1">12</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; a\\</span><span class="enlighter-c0"> % &lt;-- Combining two cells with alignment c| and content 12.</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">4</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">25.113231</span><span class="enlighter-text"> &amp; d\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multicolumn table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multicolumn{2}{c|}{12} &amp; a\\ % &lt;-- Combining two cells with alignment c| and content 12.
+      \hline
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multicolumn table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multicolumn{2}{c|}{12} &amp; a\\ % &lt;-- Combining two cells with alignment c| and content 12.
+      \hline
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...
+</pre>
+
+<p>This will result in the following content:</p>
+
+<p><cms-plugin alt="Image - table-6.png " id="354" render-plugin="true" title="Image - table-6.png"><img decoding="async" alt="table-6.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-6.png__257x139_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<h3><a name="Multicell"></a>Combining multirow and multicolumn</h3>
+
+<p>Of course it’s also possible to combine the two features, to make a cell spanning multiple rows and columns. To do this, we simply use the <em>multicolumn</em> command and instead of specifying content, we add a <em>multirow</em> command as the content. We then have to add another <em>multicolumn</em> statement for as many rows as we’re combining.</p>
+
+<p>Because this is a little hard to explain, it will be much clearer when looking at the code. In this example, we’re going to combine two columns and two rows, so we’re getting a cell spanning a total of four cells:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Multirow and -column table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\multicolumn</span><span class="enlighter-g1">{</span><span class="enlighter-n1">2</span><span class="enlighter-g1">}{</span><span class="enlighter-text">c|</span><span class="enlighter-g1">}{</span><span class="enlighter-k0">\multirow</span><span class="enlighter-g1">{</span><span class="enlighter-n1">2</span><span class="enlighter-g1">}{</span><span class="enlighter-text">*</span><span class="enlighter-g1">}{</span><span class="enlighter-n1">1234</span><span class="enlighter-g1">}}</span><span class="enlighter-text"> &amp; a\\</span><span class="enlighter-c0"> % &lt;-- Multicolumn spanning 2 columns, content multirow spanning two rows</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\multicolumn</span><span class="enlighter-g1">{</span><span class="enlighter-n1">2</span><span class="enlighter-g1">}{</span><span class="enlighter-text">c|</span><span class="enlighter-g1">}{}</span><span class="enlighter-text"> &amp; b\\</span><span class="enlighter-c0"> % &lt;-- Multicolumn spanning 2 columns with empty content as placeholder</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\hline</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">4</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">25.113231</span><span class="enlighter-text"> &amp; d\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multirow and -column table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multicolumn{2}{c|}{\multirow{2}{*}{1234}} &amp; a\\ % &lt;-- Multicolumn spanning 2 columns, content multirow spanning two rows
+      \multicolumn{2}{c|}{} &amp; b\\ % &lt;-- Multicolumn spanning 2 columns with empty content as placeholder
+      \hline
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Multirow and -column table.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \hline
+      \multicolumn{2}{c|}{\multirow{2}{*}{1234}} &amp; a\\ % &lt;-- Multicolumn spanning 2 columns, content multirow spanning two rows
+      \multicolumn{2}{c|}{} &amp; b\\ % &lt;-- Multicolumn spanning 2 columns with empty content as placeholder
+      \hline
+      3 &amp; 23.113231 &amp; c\\
+      4 &amp; 25.113231 &amp; d\\
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...
+</pre>
+
+<p>Our document will now contain a table, with a huge cell:</p>
+
+<p><cms-plugin alt="Image - table-7.png " id="355" render-plugin="true" title="Image - table-7.png"><img decoding="async" alt="table-7.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-7.png__274x140_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<h2><a name="Booktabs"></a>Prettier tables with booktabs</h2>
+
+<p>Of course beauty is always in the eye of the beholder, but I personally think, that the default <em>hlines</em>&nbsp;used by the table environment are not very pretty. For my tables, i always use the <em>booktabs</em> package, which provides much prettier horizontal separators and the usage is not harder compared to simply using hlines.</p>
+
+<p>Again, we have to add the according <em>booktabs</em> package to our preamble:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\usepackage</span><span class="enlighter-g1">{</span><span class="enlighter-text">booktabs</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % For prettier tables</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"> </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\usepackage{booktabs} % For prettier tables
+
+\begin{document} 
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\usepackage{booktabs} % For prettier tables
+
+\begin{document} 
+
+%...</pre>
+
+<p>We can now replace the hlines in our example table with <em>toprule</em>, <em>midrule</em> and <em>bottomrule</em> provided by the booktabs package:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Table using booktabs.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\toprule</span><span class="enlighter-c0"> % &lt;-- Toprule here</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\midrule</span><span class="enlighter-c0"> % &lt;-- Midrule here</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\bottomrule</span><span class="enlighter-c0"> % &lt;-- Bottomrule here</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">table</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table using booktabs.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \toprule % &lt;-- Toprule here
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \midrule % &lt;-- Midrule here
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      \bottomrule % &lt;-- Bottomrule here
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{table}[h!]
+  \begin{center}
+    \caption{Table using booktabs.}
+    \label{tab:table1}
+    \begin{tabular}{l|S|r}
+      \toprule % &lt;-- Toprule here
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+      \midrule % &lt;-- Midrule here
+      1 &amp; 1110.1 &amp; a\\
+      2 &amp; 10.1 &amp; b\\
+      3 &amp; 23.113231 &amp; c\\
+      \bottomrule % &lt;-- Bottomrule here
+    \end{tabular}
+  \end{center}
+\end{table}
+
+%...
+</pre>
+
+<p>You can decide for yourself, if you prefer the <em>hlines</em> or the following output:</p>
+
+<p><cms-plugin alt="Image - table-8.png " id="356" render-plugin="true" title="Image - table-8.png"><img decoding="async" alt="table-8.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-8.png__253x143_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<h2><a name="Multipage"></a>Multipage tables</h2>
+
+<p>If you have a lot of rows in your table, you will notice that by default, the table will be cropped at the bottom of the page, which is certainly not what you want. The package <em>longtable</em>&nbsp;provides a convenient way, to make tables span multiple pages. Of course we have to add the package to our preamble before we can start using it:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\usepackage</span><span class="enlighter-g1">{</span><span class="enlighter-text">longtable</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % To display tables on several pages</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"> </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\usepackage{longtable} % To display tables on several pages
+
+\begin{document} 
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\usepackage{longtable} % To display tables on several pages
+
+\begin{document} 
+
+%...</pre>
+
+<p>It’s actually not harder, but easier to use than the previous code for tables. I will first show you what the code looks like and than explain the differences between longtable and tabular, in case they’re not obvious.</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">longtable</span><span class="enlighter-g1">}[</span><span class="enlighter-text">c</span><span class="enlighter-g1">]{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % &lt;-- Replaces \begin{table}, alignment must be specified here (no more tabular)</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Multipage table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\toprule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\midrule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\endfirsthead</span><span class="enlighter-c0"> % &lt;-- This denotes the end of the header, which will be shown on the first page only</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\toprule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\midrule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\endhead</span><span class="enlighter-c0"> % &lt;-- Everything between \endfirsthead and \endhead will be shown as a header on every page</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text"> </span><span class="enlighter-c0"> % ...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"> </span><span class="enlighter-c0"> % ... Many rows in between</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"> </span><span class="enlighter-c0"> % ...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\bottomrule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">longtable</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{longtable}[c]{l|S|r} % &lt;-- Replaces \begin{table}, alignment must be specified here (no more tabular)
+  \caption{Multipage table.}
+  \label{tab:table1}\\
+  \toprule
+  \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+  $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+  \midrule
+  \endfirsthead % &lt;-- This denotes the end of the header, which will be shown on the first page only
+  \toprule
+  \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+  $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+  \midrule
+  \endhead % &lt;-- Everything between \endfirsthead and \endhead will be shown as a header on every page
+  1 &amp; 1110.1 &amp; a\\
+  2 &amp; 10.1 &amp; b\\
+  % ...
+  % ... Many rows in between
+  % ...
+  3 &amp; 23.113231 &amp; c\\
+  \bottomrule
+\end{longtable}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{longtable}[c]{l|S|r} % &lt;-- Replaces \begin{table}, alignment must be specified here (no more tabular)
+  \caption{Multipage table.}
+  \label{tab:table1}\\
+  \toprule
+  \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+  $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+  \midrule
+  \endfirsthead % &lt;-- This denotes the end of the header, which will be shown on the first page only
+  \toprule
+  \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+  $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+  \midrule
+  \endhead % &lt;-- Everything between \endfirsthead and \endhead will be shown as a header on every page
+  1 &amp; 1110.1 &amp; a\\
+  2 &amp; 10.1 &amp; b\\
+  % ...
+  % ... Many rows in between
+  % ...
+  3 &amp; 23.113231 &amp; c\\
+  \bottomrule
+\end{longtable}
+
+%...
+</pre>
+
+<p>In the previous examples, we’ve always used the table and tabular environments. The longtable environment replaces both of them or rather combines both of them into a single environment. We now use <em>\begin{longtable}[POSITION_ON_PAGE]{ALIGNMENT}</em> as an environment for our tables. Using this environment, we create a table, that is automatically split between pages, if it has too many rows.</p>
+
+<p>The content on the table on the first page looks like this:</p>
+
+<p><cms-plugin alt="Image - table-9a.png " id="357" render-plugin="true" title="Image - table-9a.png"><img decoding="async" alt="table-9a.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-9a.png__276x175_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>Imagine that this table has many rows (…) being a placeholder for more rows and that the table&nbsp;continues the following page like this:</p>
+
+<p><cms-plugin alt="Image - table-9b.png " id="358" render-plugin="true" title="Image - table-9b.png"><img decoding="async" alt="table-9b.png" class="filer_image  img-responsive" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-9b.png__268x129_q85_crop_subsampling-2_upscale.png"> </cms-plugin></p>
+
+<p>Note that there’s again a header on this page, but without the caption. This is because I’ve added the commands \endfirsthead and \endhead to my table, where everything written before <em>\endfirsthead</em> declares the header for the first page the table occurs on and everything between <em>\endfirsthead</em> and<em> \endhead</em> denotes the header, which should be repeated on every following page. If you don’t want a header on the following pages, you can simply remove everything in between <em>\endfirsthead</em> and <em>\endhead</em>&nbsp;including the<em>&nbsp;\endhead</em> command.</p>
+
+<h2><a name="Landscape"></a>Landscape tables</h2>
+
+<p>Now that we have a solution for too many rows, we could also be facing the same problem if we had too many columns. If we add too many columns, we might be getting a table that’s too wide for the page. In this situation, it’s often best to simply rotate the table and print it in sideways. While there are many different ways to rotate the table, the only that I’ve found to be satisfying was using the <em>rotating</em> package.</p>
+
+<p>First we include the required&nbsp;package in our preamble:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\usepackage</span><span class="enlighter-g1">{</span><span class="enlighter-text">rotating</span><span class="enlighter-g1">}</span><span class="enlighter-c0"> % To display tables in landscape</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">document</span><span class="enlighter-g1">}</span><span class="enlighter-text"> </span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\usepackage{rotating} % To display tables in landscape
+
+\begin{document} 
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\usepackage{rotating} % To display tables in landscape
+
+\begin{document} 
+
+%...</pre>
+
+<p>This package provides the <em>sidewaystable</em> environment, which is very easy to use. Just replace the <em>table</em> environment with the <em>sidewaystable</em> environment&nbsp;like this:</p>
+
+<div class="enlighter-default enlighter-v-standard enlighter-t-monokai enlighter-l-latex enlighter-hover enlighter-linenumbers "><div class="enlighter-toolbar-top enlighter-toolbar"><div class="enlighter-btn enlighter-btn-raw"><div class="enlighter-tooltip">Plain text</div></div><div class="enlighter-btn enlighter-btn-copy"><div class="enlighter-tooltip">Copy to clipboard</div></div><div class="enlighter-btn enlighter-btn-window"><div class="enlighter-tooltip">Open code in new window</div></div><div class="enlighter-btn enlighter-btn-website"><div class="enlighter-tooltip">EnlighterJS 3 Syntax Highlighter</div></div></div><div class="enlighter-code"><div class="enlighter" style=""><div class=""><div><span class="enlighter-c0">%...</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">sidewaystable</span><span class="enlighter-g1">}[</span><span class="enlighter-text">h!</span><span class="enlighter-g1">]</span><span class="enlighter-c0"> % &lt;--</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\caption</span><span class="enlighter-g1">{</span><span class="enlighter-text">Landscape table.</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\label</span><span class="enlighter-g1">{</span><span class="enlighter-text">tab:table1</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\begin</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}{</span><span class="enlighter-text">l|S|r</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\toprule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">1</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">2</span><span class="enlighter-g1">}</span><span class="enlighter-text"> &amp; </span><span class="enlighter-k0">\textbf</span><span class="enlighter-g1">{</span><span class="enlighter-text">Value </span><span class="enlighter-n1">3</span><span class="enlighter-g1">}</span><span class="enlighter-text">\\</span></div></div><div class=""><div><span class="enlighter-text">      </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\alpha</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\beta</span><span class="enlighter-s3">$</span><span class="enlighter-text"> &amp; </span><span class="enlighter-s3">$</span><span class="enlighter-k0">\gamma</span><span class="enlighter-s3">$</span><span class="enlighter-text"> \\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\midrule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-n1">1</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">1110.1</span><span class="enlighter-text"> &amp; a\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-n1">2</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">10.1</span><span class="enlighter-text"> &amp; b\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-n1">3</span><span class="enlighter-text"> &amp; </span><span class="enlighter-n0">23.113231</span><span class="enlighter-text"> &amp; c\\</span></div></div><div class=""><div><span class="enlighter-text">    </span><span class="enlighter-k0">\bottomrule</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">tabular</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text">  </span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">center</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-k0">\end</span><span class="enlighter-g1">{</span><span class="enlighter-text">sidewaystable</span><span class="enlighter-g1">}</span><span class="enlighter-text"></span></div></div><div class=""><div><span class="enlighter-text"></span><span class="enlighter-c0"></span></div></div><div class=""><div><span class="enlighter-c0">%...</span></div></div></div><div class="enlighter-raw">%...
+
+\begin{sidewaystable}[h!] % &lt;--
+  \begin{center}
+  \caption{Landscape table.}
+  \label{tab:table1}
+  \begin{tabular}{l|S|r}
+      \toprule
+      \textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+      $\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+    \midrule
+    1 &amp; 1110.1 &amp; a\\
+    2 &amp; 10.1 &amp; b\\
+    3 &amp; 23.113231 &amp; c\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{sidewaystable}
+
+%...</div></div><div class="enlighter-toolbar-bottom enlighter-toolbar"></div></div><pre class="EnlighterJSRAW enlighter-origin" data-enlighter-language="latex" data-enlighter-theme="" data-enlighter-highlight="" data-enlighter-linenumbers="" data-enlighter-lineoffset="" data-enlighter-title="" data-enlighter-group="">%...
+
+\begin{sidewaystable}[h!] % &lt;--
+  \begin{center}
+  \caption{Landscape table.}
+  \label{tab:table1}
+  \begin{tabular}{l|S|r}
+  	\toprule
+  	\textbf{Value 1} &amp; \textbf{Value 2} &amp; \textbf{Value 3}\\
+  	$\alpha$ &amp; $\beta$ &amp; $\gamma$ \\
+    \midrule
+    1 &amp; 1110.1 &amp; a\\
+    2 &amp; 10.1 &amp; b\\
+    3 &amp; 23.113231 &amp; c\\
+    \bottomrule
+  \end{tabular}
+  \end{center}
+\end{sidewaystable}
+
+%...
+</pre>
+
+<p>This will automatically rotate the table for us, so it can be read when flipping the page sideways:</p>
+
+<p><cms-plugin alt="Image - table-10.png " id="359" render-plugin="true" title="Image - table-10.png"><img decoding="async" alt="table-10.png" class="filer_image" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/table-10.png"> </cms-plugin></p>
+
+<h2><a name="Csv"></a>Tables from Excel (.csv) to LaTeX</h2>
+
+<p>There are two disadvantages of writing tables by hand as described in this tutorial. While it works for small tables similar to the one in our example, it can take a long time to enter a large amount of data by hand. Most of the time the data will be collected in form of a spreadsheet and we don’t want to enter the data twice. Furthermore once put into LaTeX tables, the data can not be plotted anymore and is not in a useful form in general. For this reason, the <cms-plugin alt="Link - next lesson " id="360" render-plugin="true" title="Link - next lesson"><a href="https://latex-tutorial.com/tutorials/pgfplotstable/">next lesson</a></cms-plugin> shows you, how to generate tables from .csv files (which can be exported from Excel and other tools) automatically.</p>
+
+<h2>Summary</h2>
+
+<ul>
+	<li>LaTeX offers the <em>table</em> and<em> tabular</em> environment for table creation</li>
+	<li>The <em>table environment </em>acts like a <em>wrapper</em> for the <em>tabular</em>&nbsp;similar to the <em>figure environment</em></li>
+	<li>Alignment and vertical separators are <em>passed as an argument</em> to the tabular environment (e.g. <em>\begin{tabular}{l|c||r}</em>)</li>
+	<li>It’s possible to align the content left (l), centered (c) and right (r), where the number of alignment operators has to match the desired number of columns</li>
+	<li>The columns can be seperated by adding | in between the alignment operators</li>
+	<li>Rows can be seperated using the<em> \hline</em> command and columns using the ampersand &amp; symbol</li>
+	<li>The <em>newline \\</em> operator indicates the end of a row</li>
+	<li>It’s possible to refer to tables using<em> \ref </em>and <em>\label</em></li>
+	<li>Align numbers at the decimal point using the <em>siunitx </em>package</li>
+	<li>Combine multiple rows and columns with the <em>multirow</em> package</li>
+	<li>Prettify your tables using the <em>booktabs</em> package</li>
+	<li>Make your tables span multiple pages with the <em>longtable </em>package</li>
+	<li>Display your tables in landscape using the <em>rotating</em> package</li>
+</ul>
+
+<p>Next Lesson: <cms-plugin alt="Link - 10 Pgfplotstable " id="207" render-plugin="true" title="Link - 10 Pgfplotstable"><a href="https://latex-tutorial.com/tutorials/pgfplotstable/">10 Pgfplotstable</a></cms-plugin></p>
+	</div><!-- .entry-content -->
+
+	</article><!-- #post-602 -->
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<aside id="secondary" class="widget-area">
+		<div class="about-wrapper">
+		<h2 class="widget-title">What is LaTeX-tutorial.com?</h2>		<div class="about-image" style="background-image: url(&#39;https://latex-tutorial.com/wp-content/uploads/2019/03/the-bearded-one-avatar.jpg&#39;)"></div>
+				<p class="about-copy">LaTeX-Tutorial provides step-by-step lessons to learn how to use LaTeX in no time. It allows you to start creating beautiful documents for your reports, books and papers through easy and simple tutorials. <br>
+<br>
+</p>
+			</div>
+	</aside><!-- #secondary -->
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="inner-wrap">
+			<div class="menu-footer-container"><ul id="footer-menu" class="inner-wrap"><li id="menu-item-314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-314"><a href="https://latex-tutorial.com/sitemap/">Sitemap</a></li>
+</ul></div>			<div class="site-info">
+					© 2024 Copyright LaTeX-Tutorial.com			</div><!-- .site-info -->
+					</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type="text/javascript">/* <![CDATA[ */!function(e,n){var r={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"monokai","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN_RAW}{BTN_COPY}{BTN_WINDOW}{BTN_WEBSITE}","toolbarBottom":""},"resources":["https:\/\/latex-tutorial.com\/wp-content\/plugins\/enlighter\/cache\/enlighterjs.min.css?W74Xdh28K3poz2N","https:\/\/latex-tutorial.com\/wp-content\/plugins\/enlighter\/resources\/enlighterjs\/enlighterjs.min.js"]},o=document.getElementsByTagName("head")[0],t=n&&(n.error||n.log)||function(){};e.EnlighterJSINIT=function(){!function(e,n){var r=0,l=null;function c(o){l=o,++r==e.length&&(!0,n(l))}e.forEach(function(e){switch(e.match(/\.([a-z]+)(?:[#?].*)?$/)[1]){case"js":var n=document.createElement("script");n.onload=function(){c(null)},n.onerror=c,n.src=e,n.async=!0,o.appendChild(n);break;case"css":var r=document.createElement("link");r.onload=function(){c(null)},r.onerror=c,r.rel="stylesheet",r.type="text/css",r.href=e,r.media="all",o.appendChild(r);break;default:t("Error: invalid file extension",e)}})}(r.resources,function(e){e?t("Error: failed to dynamically load EnlighterJS resources!",e):"undefined"!=typeof EnlighterJS?EnlighterJS.init(r.selectors.block,r.selectors.inline,r.options):t("Error: EnlighterJS resources not loaded yet!")})},(document.querySelector(r.selectors.block)||document.querySelector(r.selectors.inline))&&e.EnlighterJSINIT()}(window,console); /* ]]> */</script><script type="text/javascript" async="" defer="" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/app.min.js" id="income-school-js-js"></script>
+<script type="text/javascript" async="" defer="" src="./LaTeX tables - Tutorial with code examples - LaTeX-Tutorial.com_files/MathJax.js" id="mathjax-js"></script>
+<div style="display: none"></div>
+
+</body></html>
