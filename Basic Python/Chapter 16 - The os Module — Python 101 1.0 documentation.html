@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://python101.pythonlibrary.org/chapter16_os.html -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter 16 - The os Module — Python 101 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/theme.css" type="text/css">
+  
+
+  
+
+  
+        <link rel="index" title="Index" href="https://python101.pythonlibrary.org/genindex.html">
+        <link rel="search" title="Search" href="https://python101.pythonlibrary.org/search.html">
+    <link rel="top" title="Python 101 1.0 documentation" href="https://python101.pythonlibrary.org/index.html">
+        <link rel="next" title="Chapter 17 - The email / smtplib Module" href="https://python101.pythonlibrary.org/chapter17_smtplib.html">
+        <link rel="prev" title="Chapter 15 - Logging" href="https://python101.pythonlibrary.org/chapter15_logging.html"> 
+
+  
+  <script async="" src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/analytics.js"></script><script src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="https://python101.pythonlibrary.org/index.html" class="icon icon-home"> Python 101
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="https://python101.pythonlibrary.org/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs">
+    <input type="hidden" name="check_keywords" value="yes">
+    <input type="hidden" name="area" value="default">
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/part_i.html">Part I - Learning the Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter1_idle.html">Chapter 1 - IDLE Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter2_strings.html">Chapter 2 - All About Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter3_lists_dicts.html">Chapter 3 - Lists, Tuples and Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter4_conditionals.html">Chapter 4 - Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter5_loops.html">Chapter 5 - Loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter6_comprehensions.html">Chapter 6 - Python Comprehensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter7_exception_handling.html">Chapter 7 - Exception Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter8_file_io.html">Chapter 8 - Working with Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter9_imports.html">Chapter 9 - Importing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter10_functions.html">Chapter 10 - Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter11_classes.html">Chapter 11 - Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/part_ii.html">Part II - Learning from the Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter12_introspection.html">Chapter 12 - Introspection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter13_csv.html">Chapter 13 - The csv Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter14_config_parser.html">Chapter 14 - configparser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter15_logging.html">Chapter 15 - Logging</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#"><span class="toctree-expand"></span>Chapter 16 - The os Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-name">os.name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-environ-os-getenv-and-os-putenv">os.environ, os.getenv() and os.putenv()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-chdir-and-os-getcwd">os.chdir() and os.getcwd()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-mkdir-and-os-makedirs">os.mkdir() and os.makedirs()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-remove-and-os-rmdir">os.remove() and os.rmdir()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-rename-src-dst">os.rename(src, dst)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-startfile">os.startfile()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-walk">os.walk()</a></li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path"><span class="toctree-expand"></span>os.path</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-basename">os.path.basename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-dirname">os.path.dirname</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-exists">os.path.exists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-isdir-os-path-isfile">os.path.isdir / os.path.isfile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-join">os.path.join</a></li>
+<li class="toctree-l3"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-split">os.path.split</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter16_os.html#wrapping-up">Wrapping Up</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter17_smtplib.html">Chapter 17 - The email / smtplib Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter18_sqlite.html">Chapter 18 - The sqlite Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter19_subprocess.html">Chapter 19 - The subprocess Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter20_sys.html">Chapter 20 - The sys Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter21_thread.html">Chapter 21 - The threading module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter22_time.html">Chapter 22 - Working with Dates and Time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter23_xml.html">Chapter 23 - The xml module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/part_iii.html">Part III - Intermediate Odds and Ends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter24_debugging.html">Chapter 24 - The Python Debugger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter25_decorators.html">Chapter 25  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter26_lambda.html">Chapter 26 - The lambda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter27_profiling.html">Chapter 27 - Code Profiling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter28_testing.html">Chapter 28 - An Intro to Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/part_iv.html">Part IV - Tips, Tricks and Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter29_pip.html">Chapter 29 - Installing Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter30_configobj.html">Chapter 30 - ConfigObj</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter31_lxml.html">Chapter 31 - Parsing XML with lxml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter32_pylint.html">Chapter 32 - Python Code Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter33_requests.html">Chapter 33 - The requests package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter34_sqlalchemy.html">Chapter 34 - SQLAlchemy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter35_virtualenv.html">Chapter 35 - virtualenv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/part_v.html">Part V - Packaging and Distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter36_creating_modules_and_packages.html">Chapter 36 - Creating Modules and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter37_pypi_packaging.html">Chapter 37 - How to Add Your Code to PyPI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter38_eggs.html">Chapter 38 - The Python egg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter39_wheels.html">Chapter 39 - Python wheels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter40_py2exe.html">Chapter 40 - py2exe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter41_bb_freeze.html">Chapter 41 - bbfreeze</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter42_cx_freeze.html">Chapter 42 - cx_Freeze</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter43_PyInstaller.html">Chapter 43 - PyInstaller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="https://python101.pythonlibrary.org/chapter44_creating_an_installer.html">Chapter 44 - Creating an Installer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="https://python101.pythonlibrary.org/index.html">Python 101</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="https://python101.pythonlibrary.org/index.html">Docs</a> »</li>
+        
+      <li>Chapter 16 - The os Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="https://python101.pythonlibrary.org/_sources/chapter16_os.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-16-the-os-module">
+<span id="id1"></span><h1>Chapter 16 - The os Module<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#chapter-16-the-os-module" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>os</strong> module has many uses. We won’t be covering everything that it can do. Instead, we will get an overview of its uses and we’ll also take a look at one of its sub-modules, known as <strong>os.path</strong>. Specifically, we will be covering the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>os.name</li>
+<li>os.environ</li>
+<li>os.chdir()</li>
+<li>os.getcwd()</li>
+<li>os.getenv()</li>
+<li>os.putenv()</li>
+<li>os.mkdir()</li>
+<li>os.makedirs()</li>
+<li>os.remove()</li>
+<li>os.rename()</li>
+<li>os.rmdir()</li>
+<li>os.startfile()</li>
+<li>os.walk()</li>
+<li>os.path</li>
+</ul>
+</div></blockquote>
+<p>That looks like a lot to cover, but there is at least ten times as many other actions that the os module can do. This chapter is just going to give you a little taste of what’s available. To use any of the methods mentioned in this section, you will need to import the <strong>os</strong> module, like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+<p>Let’s start learning how to use this module!</p>
+<div class="section" id="os-name">
+<h2>os.name<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-name" title="Permalink to this headline">¶</a></h2>
+<p>The os module has both callable functions and normal values. In the case of <strong>os.name</strong>, it is just a value. When you access os.name, you will get information about what platform you are running on. You will receive one of the following values: ‘posix’, ‘nt’, ‘os2’, ‘ce’, ‘java’, ‘riscos’. Let’s see what we get when we run it on Windows 7:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">name</span>
+<span class="go">'nt'</span>
+</pre></div>
+</div>
+<p>This tells us that our Python instance is running on a Windows box. How do we know this? Because Microsoft started calling its operating system NT many years ago. For example, Windows 7 is also known as Windows NT 6.1.</p>
+</div>
+<div class="section" id="os-environ-os-getenv-and-os-putenv">
+<h2>os.environ, os.getenv() and os.putenv()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-environ-os-getenv-and-os-putenv" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.environ</strong> value is known as a <strong>mapping</strong> object that returns a dictionary of the user’s environmental variables. You may not know this, but every time you use your computer, some environment variables are set. These can give you valuable information, such as number of processors, type of CPU, the computer name, etc. Let’s see what we can find out about our machine:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span>
+<span class="go">{'ALLUSERSPROFILE': 'C:\\ProgramData',</span>
+<span class="go"> 'APPDATA': 'C:\\Users\\mike\\AppData\\Roaming',</span>
+<span class="go"> 'CLASSPATH': '.;C:\\Program Files\\QuickTime\\QTSystem\\QTJava.zip',</span>
+<span class="go"> 'COMMONPROGRAMFILES': 'C:\\Program Files\\Common Files',</span>
+<span class="go"> 'COMPUTERNAME': 'MIKE-PC',</span>
+<span class="go"> 'COMSPEC': 'C:\\Windows\\system32\\cmd.exe',</span>
+<span class="go"> 'FP_NO_HOST_CHECK': 'NO',</span>
+<span class="go"> 'HOMEDRIVE': 'C:',</span>
+<span class="go"> 'HOMEPATH': '\\Users\\mike',</span>
+<span class="go"> 'LOCALAPPDATA': 'C:\\Users\\mike\\AppData\\Local',</span>
+<span class="go"> 'LOGONSERVER': '\\\\MIKE-PC',</span>
+<span class="go"> 'NUMBER_OF_PROCESSORS': '2',</span>
+<span class="go"> 'OS': 'Windows_NT',</span>
+<span class="go"> 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',</span>
+<span class="go"> 'PROCESSOR_ARCHITECTURE': 'x86',</span>
+<span class="go"> 'PROCESSOR_IDENTIFIER': 'x86 Family 6 Model 15 Stepping 13, GenuineIntel',</span>
+<span class="go"> 'PROCESSOR_LEVEL': '6',</span>
+<span class="go"> 'PROGRAMDATA': 'C:\\ProgramData',</span>
+<span class="go"> 'PROGRAMFILES': 'C:\\Program Files',</span>
+<span class="go"> 'PSMODULEPATH': 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\',</span>
+<span class="go"> 'PUBLIC': 'C:\\Users\\Public',</span>
+<span class="go"> 'PYTHONIOENCODING': 'cp437',</span>
+<span class="go"> 'QTJAVA': 'C:\\Program Files\\QuickTime\\QTSystem\\QTJava.zip',</span>
+<span class="go"> 'SESSIONNAME': 'Console',</span>
+<span class="go"> 'SYSTEMDRIVE': 'C:',</span>
+<span class="go"> 'SYSTEMROOT': 'C:\\Windows',</span>
+<span class="go"> 'TEMP': 'C:\\Users\\mike\\AppData\\Local\\Temp',</span>
+<span class="go"> 'TMP': 'C:\\Users\\mike\\AppData\\Local\\Temp',</span>
+<span class="go"> 'USERDOMAIN': 'mike-PC',</span>
+<span class="go"> 'USERNAME': 'mike',</span>
+<span class="go"> 'USERPROFILE': 'C:\\Users\\mike',</span>
+<span class="go"> 'VBOX_INSTALL_PATH': 'C:\\Program Files\\Oracle\\VirtualBox\\',</span>
+<span class="go"> 'VS90COMNTOOLS': 'C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\Tools\\',</span>
+<span class="go"> 'WINDIR': 'C:\\Windows',</span>
+<span class="go"> 'WINDOWS_TRACING_FLAGS': '3',</span>
+<span class="go"> 'WINDOWS_TRACING_LOGFILE': 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log',</span>
+<span class="go"> 'WINGDB_ACTIVE': '1',</span>
+<span class="go"> 'WINGDB_PYTHON': 'c:\\python27\\python.exe',</span>
+<span class="go"> 'WINGDB_SPAWNCOOKIE': 'rvlxwsGdD7SHYIJm'}</span>
+</pre></div>
+</div>
+<p>Your output won’t be the same as mine as everyone’s PC configuration is a little different, but you’ll see something similar. As you may have noticed, this returned a dictionary. That means you can access the environmental variables using your normal dictionary methods. Here’s an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"TMP"</span><span class="p">])</span>
+<span class="go">'C:\\Users\\mike\\AppData\\Local\\Temp'</span>
+</pre></div>
+</div>
+<p>You could also use the <strong>os.getenv</strong> function to access this environmental variable:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"TMP"</span><span class="p">)</span>
+<span class="go">'C:\\Users\\mike\\AppData\\Local\\Temp'</span>
+</pre></div>
+</div>
+<p>The benefit of using os.getenv() instead of the os.environ dictionary is that if you happen to try to access an environmental variable that doesn’t exist, the getenv function will just return None. If you did the same thing with os.environ, you would receive an error. Let’s give it a try so you can see what happens:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"TMP2"</span><span class="p">]</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">"&lt;pyshell#1&gt;"</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"TMP2"</span><span class="p">]</span>
+  File <span class="nb">"C:\Python27\lib\os.py"</span>, line <span class="m">423</span>, in <span class="n">__getitem__</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="o">.</span><span class="n">upper</span><span class="p">()]</span>
+<span class="gr">KeyError</span>: <span class="n">'TMP2'</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">"TMP2"</span><span class="p">))</span>
+<span class="go">None</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="os-chdir-and-os-getcwd">
+<h2>os.chdir() and os.getcwd()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-chdir-and-os-getcwd" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.chdir</strong> function allows us to change the directory that we’re currently running our Python session in. If you want to actually know what path you are currently in, then you would call <strong>os.getcwd()</strong>. Let’s try them both out:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="go">'C:\\Python27'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s2">r"c:\Users\mike\Documents"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="go">'c:\\Users\\mike\\Documents'</span>
+</pre></div>
+</div>
+<p>The code above shows us that we started out in the Python directory by default when we run this code in IDLE. Then we change folders using <strong>os.chdir()</strong>. Finally we call os.getcwd() a second time to make sure that we changed to the folder successfully.</p>
+</div>
+<div class="section" id="os-mkdir-and-os-makedirs">
+<h2>os.mkdir() and os.makedirs()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-mkdir-and-os-makedirs" title="Permalink to this headline">¶</a></h2>
+<p>You might have guessed this already, but the two methods covered in this section are used for creating directories. The first one is <strong>os.mkdir()</strong>, which allows us to create a single folder. Let’s try it out:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s2">"test"</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">r'C:\Users\mike\Documents\pytest'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The first line of code will create a folder named <strong>test</strong> in the current directory. You can use the methods in the previous section to figure out where you just ran your code if you’ve forgotten. The second example assigns a path to a variable and then we pass the path to os.mkdir(). This allows you to create a folder anywhere on your system that you have permission to.</p>
+<p>The <strong>os.makedirs()</strong> function will create all the intermediate folders in a path if they don’t already exist. Basically this means that you can created a path that has nested folders in it. I find myself doing this a lot when I create a log file that is in a dated folder structure, like Year/Month/Day. Let’s look at an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">r'C:\Users\mike\Documents\pytest\2014\02\19'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>What happened here? This code just created a bunch of folders! If you still had the <strong>pytest</strong> folder in your system, then it just added a <strong>2014</strong> folder with another folder inside of it which also contained a folder. Try it out for yourself using a valid path on your system.</p>
+</div>
+<div class="section" id="os-remove-and-os-rmdir">
+<h2>os.remove() and os.rmdir()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-remove-and-os-rmdir" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.remove()</strong> and <strong>os.rmdir()</strong> functions are used for deleting files and directories respectively. Let’s look at an example of <strong>os.remove()</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">"test.txt"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code snippet will attempt to remove a file named <strong>test.txt</strong> from your current working directory. If it cannot find the file, you will likely receive some sort of error. You will also receive an error if the file is in use (i.e. locked) or you don’t have permission to delete the file. You might also want to check out <strong>os.unlink</strong>, which does the same thing. The term <strong>unlink</strong> is the traditional Unix name for this procedure.</p>
+<p>Now let’s look at an example of <strong>os.rmdir()</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">rmdir</span><span class="p">(</span><span class="s2">"pytest"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The code above will attempt to remove a directory named <strong>pytest</strong> from your current working directory. If it’s successful, you will see that the directory no longer exists. An error will be raised if the directory does not exist, you do not have permission to remove it or if the directory is not empty. You might also want to take a look at <strong>os.removedirs()</strong> which can remove nested empty directories recursively.</p>
+</div>
+<div class="section" id="os-rename-src-dst">
+<h2>os.rename(src, dst)<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-rename-src-dst" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.rename()</strong> function will rename a file or folder. Let’s take a look at an example where we rename a file:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">"test.txt"</span><span class="p">,</span> <span class="s2">"pytest.txt"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, we tell <strong>os.rename</strong> to rename a file named <strong>test.txt</strong> to <strong>pytest.txt</strong>. This occurs in our current working directory. You will see an error occur if you try to rename a file that doesn’t exist or that you don’t have the proper permission to rename the file.</p>
+<p>There is also an <strong>os.renames</strong> function that recursively renames a directory or file.</p>
+</div>
+<div class="section" id="os-startfile">
+<h2>os.startfile()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-startfile" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.startfile()</strong> method allows us to “start” a file with its associated program. In other words, we can open a file with it’s associated program, just like when you double-click a PDF and it opens in Adobe Reader. Let’s give it a try!</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">startfile</span><span class="p">(</span><span class="s1">r'C:\Users\mike\Documents\labels.pdf'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the example above, I pass a fully qualified path to <strong>os.startfile</strong> that tells it to open a file called <strong>labels.pdf</strong>. On my machine, this will open the PDF in Adobe Reader. You should try opening your own PDFs, MP3s, and photos using this method to see how it works.</p>
+</div>
+<div class="section" id="os-walk">
+<h2>os.walk()<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-walk" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.walk()</strong> method gives us a way to iterate over a root level path. What this means is that we can pass a path to this function and get access to all its sub-directories and files. Let’s use one of the Python folders that we have handy to test this function with. We’ll use: C:\Python27\Tools</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="s1">r'C:\Python27\Tools'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="go">        print(root)</span>
+
+<span class="go">C:\Python27\Tools</span>
+<span class="go">C:\Python27\Tools\i18n</span>
+<span class="go">C:\Python27\Tools\pynche</span>
+<span class="go">C:\Python27\Tools\pynche\X</span>
+<span class="go">C:\Python27\Tools\Scripts</span>
+<span class="go">C:\Python27\Tools\versioncheck</span>
+<span class="go">C:\Python27\Tools\webchecker</span>
+</pre></div>
+</div>
+<p>If you want, you can also loop over <strong>dirs</strong> and <strong>files</strong> too. Here’s one way to do it:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<span class="go">        print(root)</span>
+<span class="go">        for _dir in dirs:</span>
+<span class="go">            print(_dir)</span>
+<span class="go">        for _file in files:</span>
+<span class="go">            print(_file)</span>
+</pre></div>
+</div>
+<p>This piece of code will print a lot of stuff out, so I won’t be showing its output here, but feel free to give it a try. Now we’re ready to learn about working with paths!</p>
+</div>
+<div class="section" id="os-path">
+<h2>os.path<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>os.path</strong> sub-module of the <strong>os</strong> module has lots of great functionality built into it. We’ll be looking at the following functions:</p>
+<blockquote>
+<div><ul class="simple">
+<li>basename</li>
+<li>dirname</li>
+<li>exists</li>
+<li>isdir and isfile</li>
+<li>join</li>
+<li>split</li>
+</ul>
+</div></blockquote>
+<p>There are lots of other functions in this sub-module. You are welcome to go read about them in the Python documentation, section 10.1.</p>
+<div class="section" id="os-path-basename">
+<h3>os.path.basename<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-basename" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>basename</strong> function will return just the filename of a path. Here is an example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">'ChipViewer.py'</span>
+</pre></div>
+</div>
+<p>I have found this useful whenever I need to use a filename for naming some related file, such as a log file. This happens a lot when I’m processing a data file.</p>
+</div>
+<div class="section" id="os-path-dirname">
+<h3>os.path.dirname<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-dirname" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>dirname</strong> function will return just the directory portion of the path. It’s easier to understand if we take a look at some code:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">'C:\\Python27\\Tools\\pynche'</span>
+</pre></div>
+</div>
+<p>In this example, we just get the directory path back. This is also useful when you want to store other files next to the file you’re processing, like the aforementioned log file.</p>
+</div>
+<div class="section" id="os-path-exists">
+<h3>os.path.exists<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-exists" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>exists</strong> function will tell you if a path exists or not. All you have to do is pass it a path. Let’s take a look:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\fake.py'</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>In the first example, we pass the <strong>exists</strong> function a real path and it returns <strong>True</strong>, which means that the path exists. In the second example, we passed it a bad path and it told us that the path did not exist by returning <strong>False</strong>.</p>
+</div>
+<div class="section" id="os-path-isdir-os-path-isfile">
+<h3>os.path.isdir / os.path.isfile<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-isdir-os-path-isfile" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>isdir</strong> and <strong>isfile</strong> methods are closely related to the <strong>exists</strong> method in that they also test for existence. However, <strong>isdir</strong> only checks if the path is a directory and <strong>isfile</strong> only checks if the path is a file. If you want to check if a path exists regardless of whether it is a file or a directory, then you’ll want to use the <strong>exists</strong> method. Anyway, let’s study some examples:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche'</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche'</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+<p>Take a moment to study this set of examples. In the first one we pass a path to a file and check if the path is really a file. Then the second example checks the same path to see if it’s a directory. You can see for yourself how that turned out. Then in the last two examples, we switched things up a bit by passing a path to a directory to the same two functions. These examples demonstrate how these two functions work.</p>
+</div>
+<div class="section" id="os-path-join">
+<h3>os.path.join<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-join" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>join</strong> method give you the ability to join one or more path components together using the appropriate separator. For example, on Windows, the separator is the backslash, but on Linux, the separator is the forward slash. Here’s how it works:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche'</span><span class="p">,</span> <span class="s1">'ChipViewer.py'</span><span class="p">)</span>
+<span class="go">'C:\\Python27\\Tools\\pynche\\ChipViewer.py'</span>
+</pre></div>
+</div>
+<p>In this example, we joined a directory path and a file path together to get a fully qualified path. Note however that the <strong>join</strong> method does <strong>not</strong> check if the result actually exists!</p>
+</div>
+<div class="section" id="os-path-split">
+<h3>os.path.split<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#os-path-split" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>split</strong> method will split a path into a tuple that contains the directory and the file. Let’s take a look:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="go">('C:\\Python27\\Tools\\pynche', 'ChipViewer.py')</span>
+</pre></div>
+</div>
+<p>This example shows what happens when we path in a path with a file. Let’s see what happens if the path doesn’t have a filename on the end:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span> <span class="o">&gt;&gt;&gt;</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche'</span><span class="p">)</span>
+<span class="p">(</span><span class="s1">'C:</span><span class="se">\\</span><span class="s1">Python27</span><span class="se">\\</span><span class="s1">Tools'</span><span class="p">,</span> <span class="s1">'pynche'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>As you can see, it took the path and split it in such a way that the last sub-folder became the second element of the tuple with the rest of the path in the first element.</p>
+<p>For our final example, I thought you might like to see a commmon use case of the <strong>split</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span><span class="p">,</span> <span class="n">fname</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">r'C:\Python27\Tools\pynche\ChipViewer.py'</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dirname</span>
+<span class="go">'C:\\Python27\\Tools\\pynche'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fname</span>
+<span class="go">'ChipViewer.py'</span>
+</pre></div>
+</div>
+<p>This shows how to do multiple assignment. When you split the path, it returns a two-element tuple. Since we have two variables on the left, the first element of the tuple is assigned to the first variable and the second element to the second variable.</p>
+</div>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping Up<a class="headerlink" href="https://python101.pythonlibrary.org/chapter16_os.html#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>At this point you should be pretty familiar with the <strong>os</strong> module. In this chapter you learned the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>how to work with environment variables</li>
+<li>change directories and discover your current working directory</li>
+<li>create and remove folders and files</li>
+<li>rename files / folders</li>
+<li>start a file with its associated application</li>
+<li>walk a directory</li>
+<li>work with paths</li>
+</ul>
+</div></blockquote>
+<p>There are a lot of other functions in the <strong>os</strong> module that are not covered here. Be sure to read the documentation to see what else you can do. In the next chapter, we will be learning about the <strong>email</strong> and <strong>smtplib</strong> modules.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="https://python101.pythonlibrary.org/chapter17_smtplib.html" class="btn btn-neutral float-right" title="Chapter 17 - The email / smtplib Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="https://python101.pythonlibrary.org/chapter15_logging.html" class="btn btn-neutral" title="Chapter 15 - Logging" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2017, Michael Driscoll.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/jquery.js"></script>
+      <script type="text/javascript" src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/underscore.js"></script>
+      <script type="text/javascript" src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="./Chapter 16 - The os Module — Python 101 1.0 documentation_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49074202-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body></html>
