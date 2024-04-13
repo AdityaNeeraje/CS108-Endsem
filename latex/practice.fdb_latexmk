@@ -1,0 +1,16 @@
+# Fdb version 3
+["pdflatex"] 1712232679 "/home/aditya/Aditya/IIT Bombay/Freshman Year/CS108/latex/practice.tex" "practice.pdf" "practice" 1712232679
+  "/etc/texmf/web2c/texmf.cnf" 1711390983 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/home/aditya/Aditya/IIT Bombay/Freshman Year/CS108/latex/practice.tex" 1712232679 1145 5b24eb140cd4723458d4367265aea832 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1136768653 1288 655e228510b4c2a1abe905c368440826 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/article.cls" 1636758526 20144 8a7de377ae7a11ee924a7499611f5a9d ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo" 1636758526 8449 bc7344e882df4d7e51c046514dee83e4 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1711390989 1405646 40916f1bb21d04872b3f41f88fac3d40 ""
+  "lingmacros.sty" 0 -1 0 ""
+  "practice.aux" 1712232679 32 3985256e7290058c681f74d7a3565a19 ""
+  "practice.tex" 1712232679 1145 5b24eb140cd4723458d4367265aea832 ""
+  (generated)
+  "practice.log"
+  "practice.pdf"
